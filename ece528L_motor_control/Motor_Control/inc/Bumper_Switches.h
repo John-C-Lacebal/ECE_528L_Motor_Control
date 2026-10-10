@@ -57,7 +57,13 @@
 void (*Bumper_Task)(uint8_t bumper_switch_state);
 
 /**
- * @brief
+ * @brief Initialize the bumper switches to generate an edge-triggered interrupt whenever the switches
+ * are pressed.
+ *
+ * This function takes a user-defined function that will be called when an interrupt  is generated.
+ * GPIO pins P4.7, P4.6, P4.5, P4.3, P4.2, and P4.0 are configured as input pins with pull-up resistors
+ * and falling edge event triggers. Priority level of the interrupts (IRQ 38) is 0. Interrupt 38 in
+ * the NVIC is enabled.
  *
  * @param task A pointer to the user-defined function that will be called on a falling edge event.
  *

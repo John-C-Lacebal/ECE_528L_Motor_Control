@@ -56,22 +56,30 @@ void Motor_Forward(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 void Motor_Backward(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 
 /**
- * @brief
+ * @brief Move the motors left with specified duty cycles.
  *
- * @param left_duty_cycle
+ * This function configures the left motor to move backwards and the right motor to move forwards, which
+ * results in the TI-RSLK MAX turning left.  It updates the duty cycle for both left and right motors
+ * using Timer A0 PWM control to adjust motor speed.
  *
- * @param right_duty_cycle
+ * @param left_duty_cycle The duty cycle for the left motor (0-99%).
+ *
+ * @param right_duty_cycle The duty cycle for the left motor (0-99%).
  *
  * @return None
  */
 void Motor_Left(uint16_t left_duty_cycle, uint16_t right_duty_cycle);
 
 /**
- * @brief
+ * @brief Move the motors right with specified duty cycles.
  *
- * @param left_duty_cycle
+ * This function configures the left motor to move forwards and the right motor to move backwards, which
+ * results in the TI-RSLK MAX turning right.  It updates the duty cycle for both left and right motors
+ * using Timer A0 PWM control to adjust motor speed.
  *
- * @param right_duty_cycle
+ * @param left_duty_cycle The duty cycle for the left motor (0-99%).
+ *
+ * @param right_duty_cycle The duty cycle for the left motor (0-99%).
  *
  * @return None
  */
